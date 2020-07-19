@@ -3,13 +3,18 @@ Create a linear model regression to predict base salary for NYC employees
 
 Introduction We got our dataset from NYC Open Data (https://data.cityofnewyork.us/City-Government/Payroll/4zc2-cuvr). Our data set contained 3,333,080 observations for the fiscal years of 2015-2019. We wanted to learn what factors contributed the most towards an employees base salary.
 
-Data Cleaning
+##Data Cleaning
 
 For our data we dropped columns that were irrelevant to our predictor such as Last Name, First Name, Mid Init, and Payroll Number. Some columns were variable overlap so we dropped Regular Gross Paid and Total Other Pay. Lastly we dropped column with high variability such as Title Description. We created new variables by turning Agency Start Date to years worked. From there we dropped everyone that was not a salary based, working in the 4 main boroughs (not Staten Island because it was not in the dataset) and not on leave.
 
-EDA
+##EDA
 
-$10,000 increase in average city employee salary over the past 5 years Average pay by borough worked Bronx $64,444 Brooklyn $65,521 Manhattan $72,903 Queens $68,192 20 years is where the average pay usually levels off and that is because a lot of employees pension kicks in at that point and people retire.
+$10,000 increase in average city employee salary over the past 5 years. 
+
+Average pay by borough worked Bronx $64,444 Brooklyn $65,521 Manhattan $72,903 Queens $68,192 20 
+![](NYC-Salary-Regression-Project/images/salary_borough.png)
+
+years is where the average pay usually levels off and that is because a lot of employees pension kicks in at that point and people retire.
 
 Feature Engineering & Selection
 
