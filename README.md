@@ -11,15 +11,23 @@ For our data we dropped columns that were irrelevant to our predictor such as La
 
 $10,000 increase in average city employee salary over the past 5 years. 
 
-Average pay by borough worked Bronx $64,444 Brooklyn $65,521 Manhattan $72,903 Queens $68,192 20 
+Average pay by borough worked Bronx $64,444 Brooklyn $65,521 Manhattan $72,903 Queens $68,192 
 ![](images/salary_borough.png)
 
-years is where the average pay usually levels off and that is because a lot of employees pension kicks in at that point and people retire.
+20 years is where the average pay usually levels off and that is because a lot of employees pension kicks in at that point and people retire.
+![](images/salary_yearsworked.png)
 
-Feature Engineering & Selection
+The highest paying agency is the Office of Collective Bargaining
+![](images/salary_agencies.png)
+
+## Feature Engineering & Selection
 
 Scaled continuous variables by normalizing. Looked for linear relationship between normalized variables and base salary and realized that if base salary is logged then they will be more linear. Next we split our data into test, train, split and used them to create and test our models. We created Ridge, Lasso and Linear Regression models. After comparing the residual sum mean squared errors we noticed that the Ridge model performed sightly better than Linear. Finally we did a K fold test to determine the best alpha.
 
-Model
+## Model
 
 Used an alpha of .01 that had a slightly lower residual sum mean squared error. Our model predicted the test data within .634 standard deviations.
+![](images/Predictions.png)
+
+## Take away
+To make the maximum amount of money working for the city working for around 20 years in Manhattan for the Office of Collective Bargaining
